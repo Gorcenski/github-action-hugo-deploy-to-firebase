@@ -7,8 +7,10 @@ hugo version
 # Use input parameters
 FIREBASE_DEPLOY_KEY=$1
 ALIAS=${2:-alias}
+SITE_DIR=$3
 
 # Build site
+cd $SITE_DIR
 hugo
 
 # Publish to Firebase
